@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NoteWale - Class 12 Arts</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      color: #222;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #0052cc;;
+      color: white;
+      padding: 30px 10px;
+      text-align: center;
+      animation: fadeInScale 1.5s ease forwards;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: popUp 1.2s ease forwards;
+      animation-delay: 0.2s;
+      opacity: 0;
+    }
+    header p {
+      font-size: 1.3rem;
+      font-weight: 500;
+      opacity: 0.85;
+      animation: fadeIn 1.5s ease forwards;
+      animation-delay: 0.8s;
+    }
+    .subjects {
+      padding: 40px 20px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    .subjects h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: grey;
+      
+      text-align: center;
+      animation: popUp 1s ease-in-out;
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      width: 260px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      background-color:  #d1e8d7;;
+    }
+    footer {
+      background: #0052cc;;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      animation: fadeIn 2s ease-in-out;
+    }@keyframes fadeInScale {
+  0% { opacity: 0; transform: scale(0.85); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes popUp {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎨 NoteWale</h1>
+    <p>Class 12 - Bio Stream Notes</p>
+  </header>  <section class="subjects">
+    <h2>📘 Biology Subjects</h2>
+    <div class="card-container">
+      <div class="card">Biology</div>
+      <div class="card">Physics</div>
+      <div class="card">Chemistry</div>
+      <div class="card">Hindi</div>
+      <div class="card">English</div>
+    </div>
+  </section>  <footer>
+    Copyright © 2025 NoteWale | Designed by Nilesh
+  </footer>
+</body>
+</html>

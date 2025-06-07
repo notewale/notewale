@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NoteWale - Study Smarter in English</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #a6d0f5;
+      color: #222;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #0052cc;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+    nav {
+      background: #003d99;
+      padding: 10px;
+      text-align: center;
+      animation: slideDown 1.2s ease-in-out;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.3s;
+      display: inline-block;
+    }
+    nav a:hover {
+      color: #ffcc00;
+      transform: scale(1.1);
+    }
+    .hero {
+      background: linear-gradient(135deg, #e6f0ff, #ffffff);
+      padding: 60px 20px;
+      text-align: center;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      animation: popUp 1.2s ease-in-out;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 25px;
+      opacity: 0.8;
+    }
+    .hero button {
+      background: #0052cc;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .hero button:hover {
+      background: #003d99;
+      transform: scale(1.05);
+    }
+    .subjects, .latest, .features {
+      padding: 40px 20px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    .subjects h2, .latest h2, .features h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #0052cc;
+      text-align: center;
+      animation: popUp 1s ease-in-out;
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .card {
+      background: #4a96d9;
+      padding: 25px;
+      border-radius: 15px;
+      width: 260px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      background-color: #d1e8d7;
+    }
+    .features ul {
+      max-width: 600px;
+      margin: auto;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      list-style-type: '✨ ';
+      padding-left: 20px;
+    }
+    footer {
+      background: #003d99;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes popUp {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* Responsive design */
+    @media (max-width: 900px) {
+      .card-container {
+        justify-content: center;
+      }
+      .card {
+        width: 45%;
+      }
+      nav a {
+        margin: 0 10px;
+      }
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+      .hero p {
+        font-size: 1.1rem;
+      }
+    }
+    @media (max-width: 600px) {
+      nav {
+        padding: 15px 5px;
+      }
+      nav a {
+        margin: 5px 8px;
+        font-size: 0.9rem;
+      }
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .card {
+        width: 90%;
+        margin-bottom: 20px;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .hero {
+        padding: 40px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📘 NoteWale</h1>
+    <p>Smart Notes for Smarter Learning</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="class12.html">Class 12</a>
+    <a href="#">CA Foundation</a>
+    <a href="#">MCQ</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <h1>Study Notes Made Easy and Effective</h1>
+    <p>Get chapterwise notes, MCQs, and tips for Class 12 and CA Foundation in simple English</p>
+    <button onclick="scrollToNotes()">Start Learning Now</button>
+  </section>
+
+  <section class="subjects">
+    <h2>📚 Subjects</h2>
+    <div class="card-container">
+      <div class="card">Business Studies</div>
+      <div class="card">Economics</div>
+      <div class="card">Accounts</div>
+      <div class="card">Business Eco (CA)</div>
+      <div class="card">MCQs</div>
+    </div>
+  </section>
+
+  <section class="latest" id="notes">
+    <h2>🆕 Latest Notes</h2>
+    <div class="card-container">
+      <div class="card">Chapter 1: Nature & Purpose of Business</div>
+      <div class="card">CA Unit 1: Basic Concepts of Economics</div>
+      <div class="card">50 Most Important MCQs - Business Studies</div>
+      <div class="card">PDF: Economics Quick Revision</div>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>✨ Why Choose NoteWale?</h2>
+    <ul>
+      <li>Easy-to-understand English Notes</li>
+      <li>Covers Class 12 and CA Foundation</li>
+      <li>Free MCQs, PYQs, and PDFs</li>
+      <li>Mobile Friendly and Fast</li>
+    </ul>
+  </section>
+
+  <footer>
+    Copyright © 2025 NoteWale | Designed by Nilesh
+  </footer>
+
+  <script>
+    function scrollToNotes() {
+      document.getElementById('notes').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
